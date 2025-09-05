@@ -169,5 +169,23 @@ a:hover   {text-decoration:    underline; }
     border-radius: 999px;
 }
 
+/*footer*/
 
+.site-footer {
+    text-align: center;
+    color: var(--muted);
+    padding: var(--space-4) var(--space-2);
+    border-top: 1px solid #1f2937;
+
+}
+
+/*Responsive tweaks*/
+@media (max-width: 900px){
+    .hero-grid {grid-template-columns: 1fr;}
+    .cards {grid-template-columns: 1fr 1fr;}
+}
+
+@media (max-width: 560px){
+    .cards{grid-template-columns: 1fr;}
+}
 
