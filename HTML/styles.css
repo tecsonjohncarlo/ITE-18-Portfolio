@@ -9,7 +9,7 @@ html {scroll-behavior:smooth;}
     --muted: #94a3b8;
     --brand:  #22d3ee;
     --brand-dark: #0ea5e9;
-    --radius: #14px;
+    --radius: 14px;
     --space-1: .5rem;
     --space-2: 1rem;
     --space-3: 1.5rem;
@@ -28,7 +28,7 @@ body  {
 
 img{ 
     /*max-*/width: 100%; 
-    height: 100%;  
+    height: auto;
     object-fit: cover;  
     display: block;   
     border-radius: 50%;
