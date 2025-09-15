@@ -38,11 +38,24 @@ img{
 a  {color: var(--brand); text-decoration: none;   }
 a:hover   {text-decoration:    underline; }
 
-.container { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--space-2); }
+.container { 
+    max-width: var(--maxw); 
+    margin: 0 auto; padding: 0 var(--space-2);
+   }
 .section  { 
     padding: var(--space-6) 0; 
 }
 
+/*#skills {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#skills h2{
+    justify-content: left;
+    
+}*/
 .skip-link {
     position: absolute;
     left: -999px;
@@ -60,6 +73,7 @@ a:hover   {text-decoration:    underline; }
     backdrop-filter: blur(8px);
     background: rgba(11,18,32, .7);
     border-bottom: 1px solid #1f2937;
+    
 }
 
 .site-header .container { 
@@ -67,7 +81,9 @@ a:hover   {text-decoration:    underline; }
     align-items: center;
     justify-content: space-between;
     padding: .8rem  1rem;
+    margin-bottom: 0;
 }
+
 .logo {
     font-size: 1.1rem;
     margin: 0;
@@ -77,6 +93,7 @@ a:hover   {text-decoration:    underline; }
 .nav {
     list-style: none;
     display: flex;
+    align-items: center;
     gap: var(--space-3);
     margin: 0;
     padding: 0;
@@ -117,11 +134,12 @@ a:hover   {text-decoration:    underline; }
 }
 
 .profile figcaption {
+    text-align: center;
     color: var(--muted);
     font-size: .9rem;
     margin-top: .5rem;
 }
-/*Buttons*/
+/*Buttons
 
 .btn{
     display: inline-block;
@@ -143,7 +161,7 @@ a:hover   {text-decoration:    underline; }
     color: var(--text);
 }
 
-.btn-outline:hover {background: rgba(34, 211, 238, .08);}
+.btn-outline:hover {background: rgba(34, 211, 238, .08);}*/
 
 /*Cards*/
 
@@ -198,6 +216,7 @@ a:hover   {text-decoration:    underline; }
     margin: 0;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     gap:.6rem;
 }
 
@@ -213,10 +232,12 @@ a:hover   {text-decoration:    underline; }
     border: 1px solid #1f2937;
     border-radius: 999px;
 
+
+
     
 }
 .chips img {
-  width: 20px;
+  width: 40px;
   height: auto;
   vertical-align: middle;
   margin-right: 6px;
@@ -248,7 +269,8 @@ a:hover   {text-decoration:    underline; }
 #theme-switch{
     height: 50px;
     width: 50px;
-    padding: 0;
+    padding: 50;
+    margin-left: auto;
     border: 2px solid rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     /*bbox-shadow: inset 0 0 6px rgba(255, 255, 255, 0.1);*/
@@ -258,14 +280,13 @@ a:hover   {text-decoration:    underline; }
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
-    top: 20px;  
-    right: 20px;
-    z-index: 1000;
+    /*top: 20px;  */
+    /*right: 20px;*/
+    /*z-index: 1000;*/
 }
 .lightmode .chips li {
     border-color: var(--bg);
-    background-color: #94a3b8;
+    background-color: #dde9f8;
 
 }
 
@@ -295,7 +316,39 @@ a:hover   {text-decoration:    underline; }
 
 }
 
+/*Edit the paragraphs */
 
+.edit-container {
+  position: relative;
+  display:block;  
+  width: 100%;
+  margin-bottom: 1rem; /* adds spacing so "See my work" stays below */
+}
+
+.editBtn {
+  position: absolute;
+  top: 0;
+  right: 0; /* button apperas on the top-right of the paragraph*/
+  padding: 4px 10px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #444;
+  color: #fff;
+  transition: background 0.2s ease, opacity 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.editBtn:hover {
+  background: #666;
+}
+
+.edit-container:hover .editBtn {
+  opacity: 1;
+  pointer-events: auto;
+}
 
 
 /*Responsive tweaks*/
